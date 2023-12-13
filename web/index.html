@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset = "UTF-8">
+		<link href = "https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel = "stylesheet">
+
+		<link rel = "stylesheet" href="styles/index.css">
+		<title>42 - Map creator</title>
+	</head>
+	<body>
+		<header>
+			<div id = "left">
+				<img src="assets/42.png" alt="icon">
+				<h2>Map creator</h2>
+			</div>
+			<div id = "right">
+				<a href="https://github.com/0Slaye" target="_blank"><button>Github</button></a>
+			</div>
+		</header>
+		<section>
+			<div id = "toolbar">
+				<div>
+					<button style="color: white; background-color: black;" onclick="set_color('#000000')">Empty</button>
+					<button style="color: white; background-color: red;" onclick="set_color('#ff0000')">Wall</button>
+					<button style="color: white; background-color: blue;" onclick="set_color('#1e00ff')">Player</button>
+					<button style="color: white; background-color: green;" onclick="set_color('#48ff00')">Exit</button>
+					<button style="color: black; background-color: yellow;" onclick="set_color('#fff200')">Collectable</button>
+				</div>
+				<div>
+					<input id="size" type="number" placeholder="Map size" onchange="populate()" value="10">
+					<button id = "creator" style="padding: 10px;border-radius: 5px;" onclick="reset()">Reset map</button>
+				</div>
+			</div>
+			<div id = "pixelart"></div>
+			<button id = "creator" onclick="create_map()">Create map</button>
+			<div id="result"></div>
+		</section>
+		<footer>
+
+		</footer>
+		<script src = "scripts/index.js"></script>
+	</body>
+</html>

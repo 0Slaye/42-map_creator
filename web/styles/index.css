@@ -1,0 +1,130 @@
+body {
+	margin: 0;
+
+	font-family: 'Roboto', sans-serif;
+	color: white;
+
+	background: #4B79A1;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #283E51, #4B79A1);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #283E51, #4B79A1); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+header {
+	padding: 10px 25px 10px 25px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+header #left {
+	display: flex;
+	align-items: center;
+}
+
+header #left img {
+	width: 50px;
+	border-radius: 20%;
+}
+
+header #left h2 {
+	margin-left: 20px;
+}
+
+header button {
+	padding: 10px 25px 10px 25px;
+
+	background-color: white;
+	border: 1px solid transparent;
+	border-radius: 20px;
+	cursor: pointer;
+	transition: box-shadow .2s
+}
+
+header button:hover {
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+section {
+	padding: 10px 25px 10px 25px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+section #toolbar {
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: 20px;
+	
+	height: 125px;
+	border: 1ps solid transparent;
+	border-radius: 20px;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+section #toolbar input {
+	padding: 10px;
+	border: 1px solid transparent;
+	border-radius: 5px;;
+}
+
+section #pixelart {
+	margin-top: 20px;
+	--size: 4;
+	height: 500px;
+	width: 500px;
+	display: grid;
+	grid-template-columns: repeat(var(--size), 1fr);
+	grid-template-rows: repeat(var(--size), 1fr);
+	gap: 3px;
+	padding: 3px;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+.pixel {
+	background-color: rgb(61, 61, 61);
+	border-radius: 1px;
+}
+
+section #toolbar button {
+	margin: 10px;
+	padding: 10px 25px 10px 25px;
+
+	background-color: white;
+	border: 1px solid transparent;
+	border-radius: 20px;
+	cursor: pointer;
+	transition: box-shadow .2s
+}
+
+section #toolbar button:hover {
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+section #creator {
+	margin-top: 20px;
+	padding: 10px 25px 10px 25px;
+
+	background-color: white;
+	border: 1px solid transparent;
+	border-radius: 20px;
+	cursor: pointer;
+	transition: box-shadow .2s
+}
+
+section #creator:hover {
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+section #result {
+	margin-top: 20px;
+	padding: 20px;
+	border-radius: 20px;
+	background-color: rgba(255, 255, 255, 0.5);
+}
