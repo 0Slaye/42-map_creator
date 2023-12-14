@@ -32,7 +32,6 @@ function populate(size) {
 function wall()
 {
 	pixels = pixelart.getElementsByTagName('*');
-	i = pixels.length / size;
 	for (let index = 0; index < pixels.length; index++) {
 		const element = pixels[index];
 		if (index >= 0 && index <= size)
@@ -75,6 +74,7 @@ window.addEventListener("mouseup", function(){
 })
 
 function reset(){
+	result.innerHTML = "";
 	container.innerHTML = ''
 	populate(size)
 }
