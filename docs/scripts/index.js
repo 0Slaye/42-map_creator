@@ -17,6 +17,7 @@ function populate(size) {
 	for (let i = 0; i < size * size; i++) {
 		const div = document.createElement('div')
 		div.classList.add('pixel')
+		div.style.backgroundColor = "#323232";
 		div.addEventListener('mouseover', function(){
 			if(!draw) return
 			div.style.backgroundColor = color
@@ -34,17 +35,17 @@ function create_map()
 	result.innerHTML = "";
 	for (let index = 0; index < pixels.length; index++) {
 		const element = pixels[index];
-		if (index % size == 0)
+		if (index % size == 0 && index != 0)
 			result.innerHTML += "<br />";
-		if (element.style.backgroundColor == "rgb(0, 0, 0)")
+		if (element.style.backgroundColor == "rgb(50, 50, 50)")
 			result.innerHTML += '0';
 		else if (element.style.backgroundColor == "rgb(255, 0, 0)")
 			result.innerHTML += '1';
-		else if (element.style.backgroundColor == "rgb(30, 0, 255)")
+		else if (element.style.backgroundColor == "rgb(0, 0, 255)")
 			result.innerHTML += 'P';
-		else if (element.style.backgroundColor == "rgb(72, 255, 0)")
+		else if (element.style.backgroundColor == "rgb(0, 255, 0)")
 			result.innerHTML += 'E';
-		else if (element.style.backgroundColor == "rgb(255, 242, 0)")
+		else if (element.style.backgroundColor == "rgb(255, 255, 0)")
 			result.innerHTML += 'C';
 		else
 			result.innerHTML += '?';

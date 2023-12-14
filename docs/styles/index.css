@@ -4,9 +4,7 @@ body {
 	font-family: 'Roboto', sans-serif;
 	color: white;
 
-	background: #4B79A1;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #283E51, #4B79A1);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #283E51, #4B79A1); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background-color: rgb(40, 40, 40);
 }
 
 header {
@@ -54,22 +52,35 @@ section {
 	align-items: center;
 }
 
+section #container {
+	display: flex;
+	flex-direction: row;
+}
+
 section #toolbar {
-	padding: 10px;
+	margin: 0px 20px 0px 20px;
+	padding: 0px 20px 0px 20px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	margin-top: 20px;
 	
-	height: 125px;
+	height: 500px;
 	border: 1ps solid transparent;
 	border-radius: 20px;
 	background-color: rgba(255, 255, 255, 0.5);
 }
 
+section #toolbar button {
+	width: 80%;
+	border: 1px solid transparent;
+	border-radius: 5px;;
+}
+
 section #toolbar input {
 	padding: 10px;
+	width: 50%;
 	border: 1px solid transparent;
 	border-radius: 5px;;
 }
