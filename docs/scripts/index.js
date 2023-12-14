@@ -29,6 +29,21 @@ function populate(size) {
 	}
 }
 
+function wall()
+{
+	pixels = pixelart.getElementsByTagName('*');
+	i = pixels.length / size;
+	for (let index = 0; index < pixels.length; index++) {
+		const element = pixels[index];
+		if (index >= 0 && index <= size)
+			element.style.backgroundColor = "rgb(255, 0, 0)";
+		else if (index >= size * size - size && index < size * size)
+			element.style.backgroundColor = "rgb(255, 0, 0)";
+		else if (index % size == 0 || index % size == size - 1)
+			element.style.backgroundColor = "rgb(255, 0, 0)";
+	}
+}
+
 function create_map()
 {
 	pixels = pixelart.getElementsByTagName('*');
