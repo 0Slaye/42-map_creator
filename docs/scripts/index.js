@@ -4,7 +4,7 @@ const result = document.getElementById("result");
 
 // Getting the value of the size input
 let size = isize.value;
-let color = "#000000";
+let color = "#323232";
 draw = false;
 
 function set_color(colors)

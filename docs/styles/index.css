@@ -77,9 +77,13 @@ section #toolbar h2 {
 }
 
 section #toolbar button {
-	width: 80%;
+	width: 100%;
 	border: 1px solid transparent;
 	border-radius: 5px;;
+}
+
+section #toolbar button:focus {
+	width: 80%;
 }
 
 section #toolbar input {
