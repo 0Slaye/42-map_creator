@@ -13,19 +13,22 @@ function set_color(colors)
 }
 
 function populate(size) {
-	container.style.setProperty('--size', size)
+	container.style.setProperty('--size', size);
 	for (let i = 0; i < size * size; i++) {
-		const div = document.createElement('div')
-		div.classList.add('pixel')
+		const div = document.createElement('div');
+		div.classList.add('pixel');
 		div.style.backgroundColor = "#323232";
+		div.addEventListener('click', function(){
+			div.style.backgroundColor = color;
+		})
 		div.addEventListener('mouseover', function(){
-			if(!draw) return
-			div.style.backgroundColor = color
+			if(!draw) return;
+			div.style.backgroundColor = color;
 		})
 		div.addEventListener('mousdown', function(){
-			div.style.backgroundColor = color
+			div.style.backgroundColor = color;
 		})
-		container.appendChild(div)
+		container.appendChild(div);
 	}
 }
 
@@ -67,21 +70,29 @@ function create_map()
 }
 
 window.addEventListener("mousedown", function(){
-	draw = true
+	draw = true;
 })
 window.addEventListener("mouseup", function(){
-	draw = false
+	draw = false;
+})
+
+window.addEventListener("dragstart",(event)=>{
+	event.preventDefault();
+})
+
+window.addEventListener('drop', (event) => {
+	e.preventDefault();
 })
 
 function reset(){
 	result.innerHTML = "";
-	container.innerHTML = ''
+	container.innerHTML = '';
 	populate(size)
 }
 
 isize.addEventListener('keyup', function(){
-	size = isize.value
-	reset()
+	size = isize.value;
+	reset();
 })
 
-populate(size)
+populate(size);
