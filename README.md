@@ -11,4 +11,4 @@ You simply have to get on the website `https://0slaye.github.io/42-map_creator/`
 
 ## License
 
-[CC0](https://choosealicense.com/licenses/cc0/)
+[MIT](https://choosealicense.com/licenses/cc0/)
