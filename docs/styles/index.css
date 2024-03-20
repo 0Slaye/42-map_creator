@@ -8,36 +8,24 @@ body {
 }
 
 header {
-	padding: 10px 25px 10px 25px;
+	padding-top: 5px;
 	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+	flex-wrap: wrap;
 	align-items: center;
-	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	justify-content: center;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 3px 8px;
 }
 
-header #left {
-	display: flex;
-	align-items: center;
+header * {
+	margin-left: 5px;
+	margin-right: 5px;
+	color: white;
 }
 
-header #left img {
+header img {
 	width: 50px;
 	border-radius: 20%;
-}
-
-header #left h2 {
-	margin-left: 20px;
-}
-
-header button {
-	padding: 10px 25px 10px 25px;
-
-	background-color: white;
-	border: 1px solid transparent;
-	border-radius: 20px;
-	cursor: pointer;
-	transition: box-shadow .2s
+	filter: invert(100%);
 }
 
 header button:hover {
@@ -91,7 +79,7 @@ section #toolbar input {
 	padding: 10px;
 	width: 80%;
 	border: 1px solid transparent;
-	border-radius: 5px;;
+	border-radius: 5px;
 }
 
 section #pixelart {
@@ -102,14 +90,15 @@ section #pixelart {
 	display: grid;
 	grid-template-columns: repeat(var(--size), 1fr);
 	grid-template-rows: repeat(var(--size), 1fr);
-	gap: 3px;
+	gap: 2px;
 	padding: 3px;
+	border-radius: 5px;
 	background-color: rgba(255, 255, 255, 0.5);
 }
 
 .pixel {
 	background-color: rgb(61, 61, 61);
-	border-radius: 1px;
+	border-radius: 5px;
 }
 
 section #toolbar button {
@@ -147,4 +136,19 @@ section #result {
 	padding: 20px;
 	border-radius: 20px;
 	background-color: rgba(255, 255, 255, 0.5);
+}
+
+#fcreator {
+	margin-top: 20px;
+	padding: 10px 25px 10px 25px;
+
+	background-color: white;
+	border: 1px solid transparent;
+	border-radius: 20px;
+	cursor: pointer;
+	transition: box-shadow .2s
+}
+
+#fcreator:active {
+	margin-top: 25px;
 }

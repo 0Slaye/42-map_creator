@@ -18,14 +18,11 @@ function populate(size) {
 		const div = document.createElement('div');
 		div.classList.add('pixel');
 		div.style.backgroundColor = "#323232";
-		div.addEventListener('click', function(){
-			div.style.backgroundColor = color;
-		})
 		div.addEventListener('mouseover', function(){
 			if(!draw) return;
 			div.style.backgroundColor = color;
 		})
-		div.addEventListener('mousdown', function(){
+		div.addEventListener('mousedown', function(){
 			div.style.backgroundColor = color;
 		})
 		container.appendChild(div);
@@ -69,6 +66,22 @@ function create_map()
 	}
 }
 
+function get_map() {
+	var map_value = document.getElementById("result");
+	var string = "";
+	create_map();
+	for (let index = 0; index < (map_value.innerHTML).length; index++) {
+		if ((map_value.innerHTML)[index] == '<')
+		{
+			string += '\n';
+			index += 3;
+		}
+		else
+			string += (map_value.innerHTML)[index];
+	}
+	navigator.clipboard.writeText(string);
+}
+
 window.addEventListener("mousedown", function(){
 	draw = true;
 })
@@ -80,9 +93,6 @@ window.addEventListener("dragstart",(event)=>{
 	event.preventDefault();
 })
 
-window.addEventListener('drop', (event) => {
-	e.preventDefault();
-})
 
 function reset(){
 	result.innerHTML = "";

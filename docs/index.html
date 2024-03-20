@@ -9,13 +9,9 @@
 	</head>
 	<body>
 		<header>
-			<div id = "left">
-				<img src="assets/42.png" alt="icon">
-				<h2>Map creator</h2>
-			</div>
-			<div id = "right">
-				<a href="https://github.com/0Slaye" target="_blank"><button>Github</button></a>
-			</div>
+			<img src="assets/42.png" alt="icon">
+			<h2>Map creator</h2>
+			<div class="break"></div>
 		</header>
 		<section>
 			<div id="container">
@@ -32,8 +28,8 @@
 				</div>
 				<div id="pixelart" ></div>
 			</div>
-			<button id = "creator" onclick="create_map()">Create map</button>
-			<div id="result"></div>
+			<button id="fcreator" onclick="get_map()">Copy to clipboard</button>
+			<div style="display: none;", id="result"></div>
 		</section>
 		<footer>
 
