@@ -146,9 +146,17 @@ section #result {
 	border: 1px solid transparent;
 	border-radius: 20px;
 	cursor: pointer;
-	transition: box-shadow .2s
 }
 
-#fcreator:active {
-	margin-top: 25px;
+#fcreator #clicked {
+	display: none;
+	color: rgb(95, 199, 95);
+}
+
+#fcreator:focus #content{
+	display: none;
+}
+
+#fcreator:focus #clicked{
+	display: block;
 }
