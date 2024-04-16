@@ -57,7 +57,7 @@ function create_map()
 			result.innerHTML += '1';
 		else if (element.style.backgroundColor == "rgb(0, 0, 255)")
 			result.innerHTML += 'P';
-		else if (element.style.backgroundColor == "rgb(0, 255, 0)")
+		else if (element.style.backgroundColor == "rgb(0, 128, 0)")
 			result.innerHTML += 'E';
 		else if (element.style.backgroundColor == "rgb(255, 255, 0)")
 			result.innerHTML += 'C';
