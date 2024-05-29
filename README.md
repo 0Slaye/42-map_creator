@@ -8,7 +8,3 @@ You simply have to get on the website `https://0slaye.github.io/42-map_creator/`
 
 ![Screenshot](assets/screenshot1.png)
 ![Screenshot](assets/screenshot2.png)
-
-## License
-
-[MIT](https://choosealicense.com/licenses/cc0/)
